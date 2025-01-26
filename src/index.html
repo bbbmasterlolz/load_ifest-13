@@ -1,210 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IFEST #13</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="./output.css" rel="stylesheet" />
-  <style>
-    body {
-      background: linear-gradient(180deg, #8D9AFF 0%, #5CD9FF 100%);
-    }
-  </style>
-</head>
-<body class="h-screen flex flex-col justify-center items-center relative text-white overflow-hidden">
-  <!-- Clouds -->
-  <div>
-    <div class="absolute top-10 -left-10">
-      <div class="flex">
-        <img
-          src="img/element/awan.svg"
-          alt="awan"
-          class="w-[250px] lg:w-[632px]"
-        >
-      </div>
-    </div>
-    <div class="absolute top-0 -right-20">
-      <div class="flex">
-        <img
-          src="img/element/awan.svg"
-          alt="awan"
-          class="w-[250px] lg:w-[511px] scale-x-[-1]"
-        >
-      </div>
-    </div>
-  <!-- bottom big  -->
-    <div class="hidden lg:block">
-      <div class="absolute bottom-10 left-0">
-        <div class="flex">
-          <img
-            src="img/element/awan.svg"
-            alt="awan"
-            class="w-[250px] lg:w-[378px]"
-          >
-        </div>
-      </div>
-      <div class="absolute bottom-0 left-[264px]">
-        <div class="flex">
-          <img
-            src="img/element/awan.svg"
-            alt="awan"
-            class="w-[250px] lg:w-[327px]"
-          >
-        </div>
-      </div>
-      <div class="absolute bottom-10 right-0">
-        <div class="flex">
-          <img
-            src="img/element/awan.svg"
-            alt="awan"
-            class="w-[250px] lg:w-[378px] scale-x-[-1]"
-          >
-        </div>
-      </div>
-      <div class="absolute bottom-0 right-[264px]">
-        <div class="flex">
-          <img
-            src="img/element/awan.svg"
-            alt="awan"
-            class="w-[250px] lg:w-[327px] scale-x-[-1]"
-          >
-        </div>
-      </div>
-    </div>
-    <!-- bottom small  -->
-    <div class="lg:hidden block">
-      <div class="absolute bottom-0 left-0">
-        <div class="flex">
-          <img
-            src="img/element/awan.svg"
-            alt="awan"
-            class="w-[250px] lg:w-[327px]"
-          >
-        </div>
-      </div>
-      <div class="absolute bottom-20 right-0">
-        <div class="flex">
-          <img
-            src="img/element/awan.svg"
-            alt="awan"
-            class="w-[250px] lg:w-[378px] scale-x-[-1]"
-          >
-        </div>
-      </div>
-    </div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEMNAS - IFest #13</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-  <!-- star -->
-  <div>
-    <!-- big -->
-    <div class="hidden lg:block">
-      <!-- top left -->
-      <div class="absolute top-[180px] left-[30px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper", {
+          slidesPerView: 1.5, // Tampilkan sebagian slide kiri dan kanan
+          spaceBetween: 20, // Jarak antar slide
+          initialSlide: 1,
+          centeredSlides: true, // Slide tengah menjadi fokus
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          // autoplay: {
+          //   delay: 3000, // Interval waktu antara peralihan slide (dalam milidetik)
+          //   disableOnInteraction: false, // Mengizinkan autoplay tetap berjalan meski ada interaksi
+          // },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          scrollbar: {
+            el: ".swiper-scrollbar",
+            draggable: true,
+          },
+        });
+      });
+    </script>
+
+    <style>
+      body {
+        background: linear-gradient(180deg, #8D9AFF 0%, #5CD9FF 100%);
+      }
+    </style>
+  </head>
+  <body class="h-screen flex flex-col justify-center items-center relative text-white overflow-hidden " >
+    <div class="fadeIn">
+      <!-- Clouds -->
+      <div>
+        <div class="absolute top-10 -left-10">
+          <div class="flex">
+            <img
+              src="img/element/awan.svg"
+              alt="awan"
+              class="w-[250px] lg:w-[632px] slideLeft"
+            >
+          </div>
+        </div>
+        <div class="absolute top-0 -right-20">
+          <div class="flex">
+            <img
+              src="img/element/awan.svg"
+              alt="awan"
+              class="w-[250px] lg:w-[511px] scale-x-[-1] slideRight"
+            >
+          </div>
+        </div>
+      <!-- bottom big  -->
+        <div class="hidden lg:block">
+          <div class="absolute bottom-10 left-0">
+            <div class="flex">
+              <img
+                src="img/element/awan.svg"
+                alt="awan"
+                class="w-[250px] lg:w-[378px] slideLeft"
+              >
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-[264px]">
+            <div class="flex">
+              <img
+                src="img/element/awan.svg"
+                alt="awan"
+                class="w-[250px] lg:w-[327px] slideLeft"
+              >
+            </div>
+          </div>
+          <div class="absolute bottom-10 right-0">
+            <div class="flex">
+              <img
+                src="img/element/awan.svg"
+                alt="awan"
+                class="w-[250px] lg:w-[378px] scale-x-[-1] slideRight"
+              >
+            </div>
+          </div>
+          <div class="absolute bottom-0 right-[264px]">
+            <div class="flex">
+              <img
+                src="img/element/awan.svg"
+                alt="awan"
+                class="w-[250px] lg:w-[327px] scale-x-[-1] slideRight"
+              >
+            </div>
+          </div>
+        </div>
+        <!-- bottom small  -->
+        <div class="lg:hidden block">
+          <div class="absolute bottom-0 left-0">
+            <div class="flex">
+              <img
+                src="img/element/awan.svg"
+                alt="awan"
+                class="w-[250px] lg:w-[327px] slideLeft"
+              >
+            </div>
+          </div>
+          <div class="absolute bottom-20 right-0">
+            <div class="flex">
+              <img
+                src="img/element/awan.svg"
+                alt="awan"
+                class="w-[250px] lg:w-[378px] scale-x-[-1] slideRight"
+              >
+            </div>
+          </div>
         </div>
       </div>
-      <div class="absolute top-[230px] left-[200px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
+    
+      <!-- star -->
+      <div>
+        <!-- big -->
+        <div class="hidden lg:block">
+          <!-- top left -->
+          <div class="absolute top-[180px] left-[30px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute top-[230px] left-[200px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute top-[50px] left-[400px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          
+          <!-- top right -->
+          <div class="absolute top-[160px] right-[30px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute top-[10px] right-[220px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <!-- bottom left -->
+          <div class="absolute bottom-[160px] left-[30px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute bottom-[10px] left-[220px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <!-- bottom right -->
+          <div class="absolute bottom-[130px] right-[165px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute bottom-[40px] right-[220px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute bottom-[80px] right-[400px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+        </div>
+        <!-- small -->
+        <div class="block lg:hidden">
+          <!-- top left -->
+          <div class="absolute top-[100px] left-[30px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute top-[20px] left-[160px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          
+          <!-- top right -->
+          <div class="absolute top-[70px] right-[30px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <!-- bottom left -->
+          <div class="absolute bottom-[160px] left-[30px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <div class="absolute bottom-[10px] left-[220px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
+          <!-- bottom right -->
+          <div class="absolute bottom-[130px] right-[15px]">
+            <div class="flex">
+              <img src="img/element/cahaya.svg" alt="cahaya" class="w-10 flicker">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="absolute top-[50px] left-[400px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
+      <!-- Text and Loader -->
+      <div class="text-center">
+        <h1 class="font-jersey text-white text-4xl lg:text-9xl">IFEST #13</h1>
+        <div class="relative w-64 h-2 bg-white rounded-full mt-2 overflow-hidden mx-auto">
+          <div class="absolute left-0 top-0 h-full w-64 bg-gradient-to-r from-blue-700 to-blue-400 animate-pulse"></div>
         </div>
-      </div>
-      
-      <!-- top right -->
-      <div class="absolute top-[160px] right-[30px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <div class="absolute top-[10px] right-[220px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <!-- bottom left -->
-      <div class="absolute bottom-[160px] left-[30px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <div class="absolute bottom-[10px] left-[220px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <!-- bottom right -->
-      <div class="absolute bottom-[130px] right-[165px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <div class="absolute bottom-[40px] right-[220px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <div class="absolute bottom-[80px] right-[400px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
+        <p class="font-khdam text-lg mt-3" style="color: #6401F8;">hero sedang memproses data ...</p>
       </div>
     </div>
-    <!-- small -->
-    <div class="block lg:hidden">
-      <!-- top left -->
-      <div class="absolute top-[100px] left-[30px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <div class="absolute top-[20px] left-[160px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      
-      <!-- top right -->
-      <div class="absolute top-[70px] right-[30px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <!-- bottom left -->
-      <div class="absolute bottom-[160px] left-[30px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <div class="absolute bottom-[10px] left-[220px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-      <!-- bottom right -->
-      <div class="absolute bottom-[130px] right-[15px]">
-        <div class="flex">
-          <img src="img/element/cahaya.svg" alt="awan" class="w-10">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Text and Loader -->
-  <div class="text-center">
-    <h1 class="font-jersey text-white text-4xl lg:text-9xl">IFEST #13</h1>
-    <div class="relative w-64 h-2 bg-white rounded-full mt-2 overflow-hidden mx-auto">
-      <div class="absolute left-0 top-0 h-full w-64 bg-gradient-to-r from-blue-700 to-blue-400 animate-pulse"></div>
-    </div>
-    <p class="font-khdam text-lg mt-3" style="color: #6401F8;">hero sedang memproses data ...</p>
-  </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
