@@ -1,0 +1,36 @@
+[debug] [2025-02-01T06:39:35.363Z] ----------------------------------------------------------------------
+[debug] [2025-02-01T06:39:35.365Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\micha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-02-01T06:39:35.365Z] CLI Version:   13.15.0
+[debug] [2025-02-01T06:39:35.366Z] Platform:      win32
+[debug] [2025-02-01T06:39:35.366Z] Node Version:  v20.16.0
+[debug] [2025-02-01T06:39:35.366Z] Time:          Sat Feb 01 2025 13:39:35 GMT+0700 (Western Indonesia Time)
+[debug] [2025-02-01T06:39:35.366Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-01T06:39:35.410Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-01T06:39:35.411Z] > authorizing via signed-in user (michael.brian.supranoto@gmail.com)
+[debug] [2025-02-01T06:39:35.411Z] [iam] checking project loading-e2df4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-02-01T06:39:35.412Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/loading-e2df4:testIamPermissions [none]
+[debug] [2025-02-01T06:39:35.412Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/loading-e2df4:testIamPermissions x-goog-quota-user=projects/loading-e2df4
+[debug] [2025-02-01T06:39:35.412Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/loading-e2df4:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-01T06:39:36.497Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/loading-e2df4:testIamPermissions 200
+[debug] [2025-02-01T06:39:36.498Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/loading-e2df4:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-01T06:39:36.498Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/loading-e2df4 [none]
+[debug] [2025-02-01T06:39:36.847Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/loading-e2df4 200
+[debug] [2025-02-01T06:39:36.848Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/loading-e2df4 {"projectId":"loading-e2df4","projectNumber":"504699110869","displayName":"loading","name":"projects/loading-e2df4","resources":{"hostingSite":"loading-e2df4"},"state":"ACTIVE","etag":"1_16736421-f88f-4204-99d8-ff9e0465552b"}
+[info] 
+[info] === Deploying to 'loading-e2df4'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-02-01T06:39:36.853Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/loading-e2df4/versions [none]
+[debug] [2025-02-01T06:39:36.853Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/loading-e2df4/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-02-01T06:39:55.675Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/loading-e2df4/versions 200
+[debug] [2025-02-01T06:39:55.676Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/loading-e2df4/versions {"name":"projects/504699110869/sites/loading-e2df4/versions/8c77286e034432d3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[loading-e2df4]: beginning deploy... 
+[info] i  hosting[loading-e2df4]: found 6 files in load/src 
+[debug] [2025-02-01T06:39:55.686Z] [hosting] uploading with 200 concurrency
+[debug] [2025-02-01T06:39:55.694Z] [hosting] hash cache [bG9hZFxzcmM] stored for 6 files
+[debug] [2025-02-01T06:39:55.694Z] [hosting][hash queue][FINAL] {"max":5,"min":0,"avg":0.8333333333333334,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":6}
+[debug] [2025-02-01T06:39:55.695Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/504699110869/sites/loading-e2df4/versions/8c77286e034432d3:populateFiles [none]
+[debug] [2025-02-01T06:39:55.695Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/504699110869/sites/loading-e2df4/versions/8c77286e034432d3:populateFiles {"files":{"/script.js":"8b17b6def95585683296e49d2e8a6077ab77489768caa7db68569107829e50e1","/output.css":"8a0c1223fb344511b40e539f92702bb3cb94bb8e2649013ba436ad30d050b392","/input.css":"fb1fbc7246b727002dbfdd6f30acfdc5a7993644637b7e606f726a9fb0127dd7","/img/element/cahaya.svg":"77c2c45027f932960aa0ba4d746adb92f529c6a3f2a75b0226e0baa0dba1af0d","/img/element/awan.svg":"155b051523551a90b63cd7107646f3326d1b13cd0552e898d12f86cc67596591","/index.html":"df89b2c0293f9195901645ba0daf5f017a322a83643b0fe49dc2bb5b805f80fe"}}
+[debug] [2025-02-01T06:40:55.728Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/504699110869/sites/loading-e2df4/versions/8c77286e034432d3:populateFiles 502
+[debug] [2025-02-01T06:40:55.728Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/504699110869/sites/loading-e2df4/versions/8c77286e034432d3:populateFiles "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 502 (Server Error)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>502.</b> <ins>That’s an error.</ins>\n  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>\n"
